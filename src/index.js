@@ -1,10 +1,9 @@
-'use strict'
-
 import React from'react'
 import ReactDOM from 'react-dom'
-import Title from './app'
+import App from './components/app'
 
 ReactDOM.render(
-  <Title />,
-  document.querySelector(['data-js="app"'])
+  <App />,
+  document.getElementById('root')
 )
+

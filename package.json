@@ -1,4 +1,13 @@
 {
+  "name": "remplate-webpack2-scss-react",
+  "description": "A simple template for developing using Webpack2, React, SASS/SCSS",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js"
+  },
+  "repository": "git@github.com:rodolfobandeira/template-webpack2-scss-react.git",
+  "author": "Rodolfo Bandeira",
+  "license": "MIT",
   "devDependencies": {
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.2",
@@ -14,6 +23,7 @@
     "webpack-dev-server": "^2.9.3"
   },
   "dependencies": {
+    "babel-preset-stage-1": "^6.24.1",
     "react": "^16.0.0",
     "react-dom": "^16.0.0",
     "style-loader": "^0.19.0"
