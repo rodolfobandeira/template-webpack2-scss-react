@@ -6,12 +6,19 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin')
 
 module.exports = {
   entry: ['./src/index.js', './src/sass/main.scss'],
+
   output: {
     path: path.join(__dirname, 'dist'),
     filename: 'bundle.js',
     publicPath: '/static/'
   },
   module: {
+    loaders: [{
+      test: /\.js$/,
+      exclude: /node_modules/,
+      include: /src/,
+      loader: 'babel'
+    }],
     rules: [
       {
         test: /\.scss$/,
