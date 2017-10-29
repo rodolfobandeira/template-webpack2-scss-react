@@ -1,14 +1,17 @@
 ### template-webpack2-scss-react
-My template for Webpack2, SCSS and React
+My template for Webpack2, SCSS/SASS and React 16
 
----
+Features:
 
-TODO:
-- Add React/ES6/Babel etc;
+- Minify/Uglify all SCSS/SASS/JS to `bundle.js` and `bundle.css`
+- Using latest ReactJS 16;
+
 ---
 
 1. `npm install`
 
-2. `webpack`
+2. `npm start`, and open `http://localhost:8080` on your browser.
 
-3. `webpack-dev-server`, and then open `http://localhost:8080` in your browser.
+---
+
+Suggestions? [@rodolfobandeira](https://twitter.com/rodolfobandeira)
