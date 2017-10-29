@@ -1,25 +1,24 @@
-'use strict'
-
 const UglifyJSPlugin = require('uglifyjs-webpack-plugin')
 const path = require('path')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
 
 module.exports = {
-  devtool: 'source-map',
+/*  devtool: 'source-map', */
   entry: ['./src/index.js', './src/sass/main.scss'],
   output: {
     path: path.join(__dirname, 'dist'),
-    filename: 'bundle.js',
-    publicPath: '/static/'
+    publicPath: '/dist/',
+    filename: 'bundle.js'
   },
   module: {
-    loaders: [{
-      test: /\.js$/,
-      exclude: /node_modules/,
-      include: /src/,
-      loader: 'babel'
-    }],
-    rules: [
+    rules: [{
+        test: /\.jsx?$/,
+        exclude: /node_modules/,
+        loader: 'babel-loader',
+        query: {
+          presets: ['react', 'es2015', 'stage-1']
+        }
+      },
       {
         test: /\.scss$/,
         use: ExtractTextPlugin.extract({
