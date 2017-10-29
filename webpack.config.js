@@ -8,7 +8,8 @@ module.exports = {
   entry: ['./src/index.js', './src/sass/main.scss'],
   output: {
     path: path.join(__dirname, 'dist'),
-    filename: 'bundle.js'
+    filename: 'bundle.js',
+    publicPath: '/static/'
   },
   module: {
     rules: [
@@ -26,7 +27,7 @@ module.exports = {
   },
   plugins: [
     new ExtractTextPlugin({
-      filename: 'style.css'
+      filename: 'bundle.css'
     }),
     new UglifyJSPlugin()
   ]
