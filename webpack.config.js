@@ -5,6 +5,7 @@ const path = require('path')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
 
 module.exports = {
+  devtool: 'source-map',
   entry: ['./src/index.js', './src/sass/main.scss'],
   output: {
     path: path.join(__dirname, 'dist'),
@@ -12,6 +13,12 @@ module.exports = {
     publicPath: '/static/'
   },
   module: {
+    loaders: [{
+      test: /\.js$/,
+      exclude: /node_modules/,
+      include: /src/,
+      loader: 'babel'
+    }],
     rules: [
       {
         test: /\.scss$/,
